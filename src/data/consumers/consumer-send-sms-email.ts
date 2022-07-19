@@ -7,7 +7,7 @@ export class SendSMSEmailConsumer {
   ) {}
   consume() {
     this.rabbitmq.consume("send_pending", (message) => {
-      console.log(message.content.toString);
+      console.log(message.content.toString());
     });
   }
 }

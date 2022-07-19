@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "dev": "ts-node-dev -r tsconfig-paths/register --respawn --inspect --transpile-only --ignore-watch node_modules --no-notify ./src/main/server.ts",
-      "build": "tsc -p ."
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --inspect --transpile-only --ignore-watch node_modules --no-notify ./src/main/server.ts",
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.10.0",
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "module-alias": "^2.2.2"
   },
   "devDependencies": {
     "@types/amqplib": "^0.8.2",
+    "@types/axios": "^0.14.0",
     "@types/dotenv": "^8.2.0",
     "@types/module-alias": "^2.0.1",
     "@types/node": "^18.0.6",
