@@ -23,7 +23,7 @@ export class RabbitMQ implements RabbitMQInterface {
       //@ts-ignore
       callback(message);
       //@ts-ignore
-      // this.channel.ack(message);
+      this.channel.ack(message);
     });
   }
 

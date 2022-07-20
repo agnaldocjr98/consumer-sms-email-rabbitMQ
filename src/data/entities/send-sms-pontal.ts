@@ -13,12 +13,18 @@ export class SendSMSPontal implements UCSendSMSPontal {
         Authorization: process.env.PONTAL_API_AUTHORIZATION,
       },
     });
+
     switch (httpResponse.statusCode) {
       case HttpStatusCode.ok:
         return { success: true };
 
       default:
-        return { success: false };
+        return {
+          success: false,
+          errorMessage: `Ocorreu uma falha ao enviar o SMS pela pontal. Erro: ${JSON.stringify(
+            httpResponse
+          )}`,
+        };
     }
   }
 }
